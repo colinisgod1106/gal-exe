@@ -1,15 +1,16 @@
 {
   "name": "gal-exe",
   "version": "1.0.0",
-  "description": "《白鷺學園的戀愛習題》— 椎名日和線 桌面版",
+  "description": "White Heron Academy galgame packaged as a Windows executable.",
   "main": "electron-main.js",
+  "private": true,
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win --x64"
+    "dist": "electron-builder --win portable --x64"
   },
   "build": {
     "appId": "com.colinisgod1106.gal",
-    "productName": "白鷺學園的戀愛習題",
+    "productName": "White Heron Academy",
     "directories": {
       "output": "dist"
     },
@@ -30,10 +31,13 @@
           ]
         }
       ]
+    },
+    "portable": {
+      "artifactName": "White-Heron-Academy-${version}-win-x64.exe"
     }
   },
   "devDependencies": {
-    "electron": "^33.4.11",
-    "electron-builder": "^25.1.8"
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
   }
 }
