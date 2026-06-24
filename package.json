@@ -1,0 +1,39 @@
+{
+  "name": "gal-exe",
+  "version": "1.0.0",
+  "description": "《白鷺學園的戀愛習題》— 椎名日和線 桌面版",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.colinisgod1106.gal",
+    "productName": "白鷺學園的戀愛習題",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron-main.js",
+      "index.html",
+      "style.css",
+      "game.js",
+      "game_script.json",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  }
+}
